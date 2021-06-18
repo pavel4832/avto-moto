@@ -1,0 +1,39 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.slider__body {
+  margin-top: 39px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider__control {
+  width: 52px;
+  height: 52px;
+  border-radius: 26px;
+  border: 1px solid $border-grey;
+  box-sizing: border-box;
+  background-color: $background-white;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  .slider__control--arrow path {
+    stroke: $text-main;
+  }
+  &:disabled {
+    cursor: auto;
+    .slider__control--arrow path {
+      stroke: $border-grey;
+    }
+  }
+  &:hover {
+    background-color: $hover-red;
+  }
+  &:disabled:hover {
+    background-color: $background-white;
+  }
+}

@@ -1,0 +1,25 @@
+.specifications {
+  width: 50%;
+}
+
+.specification__list {
+  padding: 0;
+  margin: 0;
+}
+
+.specification__item {
+  list-style-type: none;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $border-grey;
+}
+
+.specification__text {
+  font-family: $OpenRegular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 50px;
+  color: $text-main;
+}
