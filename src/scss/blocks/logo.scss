@@ -1,0 +1,36 @@
+.logo__wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo__image {
+  align-self: flex-start;
+}
+
+.logo__text {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.logo__text--element {
+  margin: 0;
+  color: $text-main;
+}
+
+.logo__text--upper {
+  font-family: $OpenBold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24.51px;
+}
+
+.logo__text--lower {
+  font-family: $OpenMedium;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19.07px;
+}

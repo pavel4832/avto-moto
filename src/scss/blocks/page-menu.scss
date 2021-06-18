@@ -1,0 +1,37 @@
+.page-menu {
+  align-self: center;
+}
+
+.page-menu__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.page-menu__item {
+  list-style-type: none;
+  margin-left: 68px;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.page-menu__link {
+  font-family: $OpenMedium;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21.79px;
+  color: $text-main;
+
+  &:hover {
+    opacity: 0.7;
+  }
+  &:active {
+    opacity: 0.4;
+  }
+}
+
+.page-menu__link--active {
+  color: $text-black;
+}

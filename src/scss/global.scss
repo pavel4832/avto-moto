@@ -12,12 +12,12 @@ body {
 
   background-color: $background-white;
 
-  font-family: $roboRegular;
+  font-family: $OpenRegular;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 18.75px;
-  color: $black;
+  color: $text-main
 }
 
 a {
@@ -35,6 +35,13 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 
+#root {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  min-height: 100%
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -47,8 +54,8 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .container {
-  width: 1366px;
-  padding: 0;
+  width: 1920px;
+  padding: 0 375px;
   margin: 0 auto;
   box-sizing: border-box;
 }
