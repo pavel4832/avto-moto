@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import Specifications from "../specification-list/specification-list";
+import Specifications from '../specification-list/specification-list';
+import Reviews from '../reviews/reviews';
+import Contacts from '../contacts/contacts';
 
 const Tabs = () => {
   return (
@@ -19,7 +21,9 @@ const Tabs = () => {
           </li>
         </ul>
         <div className="tabs__body">
-          <Specifications />
+          {/*<Specifications />*/}
+          <Reviews />
+          {/*<Contacts />*/}
         </div>
       </div>
     </section>

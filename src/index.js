@@ -6,7 +6,7 @@ import {createAPI} from './services/api';
 import {Provider} from 'react-redux';
 import {Router as BrowserRouter} from 'react-router-dom';
 import App from './components/app/app';
-import rootReducer from './store/root-reduser';
+import rootReducer from './store/root-reducer';
 import {redirect} from './store/middlewares/redirect';
 import browserHistory from './browser-history';
 

@@ -1,7 +1,7 @@
 .description {
   display: flex;
   flex-direction: column;
-  margin-left: 54px;
+  margin-left: 48px;
 }
 
 .description__title {
@@ -16,6 +16,9 @@
 }
 
 .description__list {
+  margin-top: 22px;
+  margin-bottom: 0;
+  margin-left: 3px;
   display: flex;
   justify-content: flex-start;
   padding: 0;
@@ -57,7 +60,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 37px;
+  margin-top: 38px;
+  margin-left: 2px;
 }
 
 .description__price--new {
@@ -71,20 +75,20 @@
 
 .description__price--old {
   position: relative;
-  margin-left: 30px;
+  margin-left: 34px;
   font-family: $OpenRegular;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 27.24px;
-  color: $text-main;
-  opacity: 0.5;
+  color: $text-gray05;
   &::before {
     content: url("../img/line.svg");
     position: absolute;
     top: -2px;
     left: -7px;
     z-index: 10;
+    opacity: 0.5;
   }
 }
 
@@ -94,23 +98,27 @@
   font-family: $OpenMedium;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 52px;
   text-align: center;
   color: $text-white;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   background-color: $background-red;
 }
 
 .description__loan {
-  margin-top: 16px;
+  margin-top: 14px;
   width: 222px;
   font-family: $OpenMedium;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 52px;
+  line-height: 48px;
   text-align: center;
   color: $text-red;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   background-color: $background-white;
   border: 1px solid $text-red;
 }

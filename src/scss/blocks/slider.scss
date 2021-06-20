@@ -2,9 +2,11 @@
   display: flex;
   flex-direction: column;
   margin-top: 16px;
+  margin-left: -5px;
 }
 
 .slider__body {
+  max-width: 600px;
   margin-top: 39px;
   display: flex;
   justify-content: space-between;

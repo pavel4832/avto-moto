@@ -1,5 +1,7 @@
 .specifications {
   width: 50%;
+  margin-top: 30px;
+  padding-right: 20px;
 }
 
 .specification__list {
@@ -13,13 +15,17 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid $border-grey;
+  &:first-child {
+    padding-top: 0;
+  }
 }
 
 .specification__text {
+  margin-bottom: 8px;
   font-family: $OpenRegular;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 50px;
+  line-height: 21.79px;
   color: $text-main;
 }
