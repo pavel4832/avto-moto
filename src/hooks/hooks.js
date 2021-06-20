@@ -5,10 +5,16 @@ const useValidation = (value, validations) => {
 
   useEffect(() => {
     for (const validation in validations) {
-      switch (validation) {
-        case `isEmpty`:
-          value ? setEmpty(false) : setEmpty(true);
-          break;
+      if (validations.hasOwnProperty(validation)) {
+        switch (validation) {
+          case `isEmpty`:
+            if (value) {
+              setEmpty(false);
+            } else {
+              setEmpty(true);
+            }
+            break;
+        }
       }
     }
   }, [value]);

@@ -5,9 +5,6 @@
   "description": "Проект акселератор 1 от HTML Academy",
   "dependencies": {
     "@reduxjs/toolkit": "1.5.0",
-    "@testing-library/jest-dom": "^5.12.0",
-    "@testing-library/react": "^11.2.6",
-    "@testing-library/user-event": "^12.8.3",
     "history": "4.10.1",
     "prop-types": "15.7.2",
     "react": "^17.0.2",
@@ -26,8 +23,7 @@
     "build": "webpack --mode production",
     "start": "webpack-dev-server",
     "eslint": "eslint --ext .jsx --ext .js src/",
-    "test": "npm run eslint && npm run test.jest",
-    "test.jest": "jest"
+    "test": "npm run eslint"
   },
   "eslintConfig": {
     "extends": [
@@ -56,7 +52,6 @@
     "eslint": "7.18.0",
     "eslint-config-htmlacademy": "2.1.0",
     "eslint-plugin-react": "7.22.0",
-    "jest": "26.6.3",
     "mini-css-extract-plugin": "1.6.0",
     "node-sass": "4.12.0",
     "optimize-css-assets-webpack-plugin": "5.0.4",
@@ -66,13 +61,5 @@
     "webpack": "4.46.0",
     "webpack-cli": "3.3.12",
     "webpack-dev-server": "3.11.2"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(css|less)$": "<rootDir>/src/style-mock.js"
-    },
-    "setupFilesAfterEnv": [
-      "./setup-tests.js"
-    ]
   }
 }
