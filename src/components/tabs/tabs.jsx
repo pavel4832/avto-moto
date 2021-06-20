@@ -11,13 +11,13 @@ const Tabs = () => {
       <div className="tabs__wrapper">
         <ul className="tabs__menu">
           <li className="tabs__item">
-            <Link className="tabs__link tabs__link--active">Характеристики</Link>
+            <Link to="#" className="tabs__link tabs__link--active">Характеристики</Link>
           </li>
           <li className="tabs__item">
-            <Link className="tabs__link">Отзывы</Link>
+            <Link to="#" className="tabs__link">Отзывы</Link>
           </li>
           <li className="tabs__item">
-            <Link className="tabs__link">Контакты</Link>
+            <Link to="#" className="tabs__link">Контакты</Link>
           </li>
         </ul>
         <div className="tabs__body">

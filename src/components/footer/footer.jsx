@@ -9,25 +9,25 @@ const Footer = () => {
         <div className="page-footer__wrapper">
           <ul className="footer__list">
             <li className="footer__item">
-              <Link className="footer__link">Корпоративным клиентам</Link>
+              <Link to="#" className="footer__link">Корпоративным клиентам</Link>
             </li>
             <li className="footer__item">
-              <Link className="footer__link">Клиентам</Link>
+              <Link to="#" className="footer__link">Клиентам</Link>
             </li>
             <li className="footer__item">
-              <Link className="footer__link">Аренда авто</Link>
+              <Link to="#" className="footer__link">Аренда авто</Link>
             </li>
             <li className="footer__item">
-              <Link className="footer__link">Каршеринг</Link>
+              <Link to="#" className="footer__link">Каршеринг</Link>
             </li>
             <li className="footer__item">
-              <Link className="footer__link">Как продать авто</Link>
+              <Link to="#" className="footer__link">Как продать авто</Link>
             </li>
             <li className="footer__item">
-              <Link className="footer__link">Trade-in</Link>
+              <Link to="#" className="footer__link">Trade-in</Link>
             </li>
             <li className="footer__item">
-              <Link className="footer__link">Test drive</Link>
+              <Link to="#" className="footer__link">Test drive</Link>
             </li>
           </ul>
         </div>

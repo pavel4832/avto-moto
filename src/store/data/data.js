@@ -8,7 +8,6 @@ const initialState = {
   car: CAR,
   photoNumber: 0,
   tabsType: TABS_TYPE.SPECIFICATION,
-  isPopUpOpen: true
 };
 
 const Data = createReducer(initialState, (builder) => {
@@ -23,20 +22,6 @@ const Data = createReducer(initialState, (builder) => {
     return {
       ...state,
       tabsType: action.payload,
-    };
-  });
-
-  builder.addCase(actions.openPopUp, (state) => {
-    return {
-      ...state,
-      isPopUpOpen: true,
-    };
-  });
-
-  builder.addCase(actions.closePopUp, (state) => {
-    return {
-      ...state,
-      isPopUpOpen: false,
     };
   });
 });

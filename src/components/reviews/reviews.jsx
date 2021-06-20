@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
 import {RATING_STARS} from '../../const';
+import PopupForm from "../popup-form/popup-form";
 
 const Reviews = () => {
+  const [modalActive, setModalActive] = useState(false);
   const {car} = useSelector((state) => state.DATA);
   const {reviews} = car;
 
@@ -38,13 +40,17 @@ const Reviews = () => {
               </div>
               <div className="reviews__answer">
                 <p className="reviews__time">{review.time}</p>
-                <Link className="reviews__link">Ответить</Link>
+                <Link to="#" className="reviews__link">Ответить</Link>
               </div>
             </li>
           </React.Fragment>
         ))}
       </ul>
-      <button className="reviews__sent button">оставить отзыв</button>
+      <button className="reviews__sent button" onClick={() => setModalActive(true)}>оставить отзыв</button>
+      <PopupForm
+        active={modalActive}
+        setActive={setModalActive}
+      />
     </section>
   );
 };

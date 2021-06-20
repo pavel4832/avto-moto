@@ -6,16 +6,16 @@ const HeaderMenu = () => {
     <nav className="page-menu">
       <ul className="page-menu__list">
         <li className="page-menu__item">
-          <Link className="page-menu__link page-menu__link--active">Автомобили</Link>
+          <Link to="#" className="page-menu__link page-menu__link--active">Автомобили</Link>
         </li>
         <li className="page-menu__item">
-          <Link className="page-menu__link">Контакты</Link>
+          <Link to="#" className="page-menu__link">Контакты</Link>
         </li>
         <li className="page-menu__item">
-          <Link className="page-menu__link">Услуги</Link>
+          <Link to="#" className="page-menu__link">Услуги</Link>
         </li>
         <li className="page-menu__item">
-          <Link className="page-menu__link">Вакансии</Link>
+          <Link to="#" className="page-menu__link">Вакансии</Link>
         </li>
       </ul>
     </nav>

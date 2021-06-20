@@ -16,11 +16,11 @@ const Contacts = () => {
         </li>
         <li className="contacts__item">
           <p className="contacts__title">Телефон</p>
-          <Link className="contacts__text">8 (800) 333-55-99</Link>
+          <Link to="tel: 88003335599" className="contacts__text">8 (800) 333-55-99</Link>
         </li>
         <li className="contacts__item">
           <p className="contacts__title">E-mail</p>
-          <Link className="contacts__text">info@avto-moto.ru</Link>
+          <Link to="mailto: info@avto-moto.ru" className="contacts__text">info@avto-moto.ru</Link>
         </li>
       </ul>
       <div className="contacts__map"></div>
