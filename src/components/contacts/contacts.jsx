@@ -23,7 +23,12 @@ const Contacts = () => {
           <Link to="mailto: info@avto-moto.ru" className="contacts__text">info@avto-moto.ru</Link>
         </li>
       </ul>
-      <div className="contacts__map"></div>
+      <div className="contacts__map">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Af12ddd607d1408abd8ca7ee006d9087491da3e21220f949eeb268e164f366c6d&amp;source=constructor"
+          width="431" height="271" frameBorder="0">
+        </iframe>
+      </div>
     </section>
   );
 };

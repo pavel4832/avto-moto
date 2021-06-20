@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
 import {RATING_STARS} from '../../const';
-import PopupForm from "../popup-form/popup-form";
+import PopupForm from '../popup-form/popup-form';
 
 const Reviews = () => {
   const [modalActive, setModalActive] = useState(false);

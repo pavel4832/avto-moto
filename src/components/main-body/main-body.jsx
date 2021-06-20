@@ -1,7 +1,7 @@
 import React from 'react';
-import Slider from "../slider/slider";
-import Description from "../description/description";
-import Tabs from "../tabs/tabs";
+import Slider from '../slider/slider';
+import Description from '../description/description';
+import Tabs from '../tabs/tabs';
 
 const MainBody = () => {
   return (

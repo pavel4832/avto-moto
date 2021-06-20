@@ -1,8 +1,8 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 import {AppRoute} from '../../const';
-import MainScreen from "../main-screen/main-screen";
-import ErrorScreen from "../error-screen/error-screen";
+import MainScreen from '../main-screen/main-screen';
+import ErrorScreen from '../error-screen/error-screen';
 
 const App = () => {
 

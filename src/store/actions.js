@@ -1,11 +1,11 @@
 import {createAction} from '@reduxjs/toolkit';
 
 export const ActionType = {
-  CHANGE_PHOTO: `data/changePhoto`,
+  REDIRECT_TO_ROUTE: `data/redirectToRoute`,
 };
 
-export const changePhoto = createAction(ActionType.CHANGE_PHOTO, (newPhoto) => {
+export const redirectToRoute = createAction(ActionType.REDIRECT_TO_ROUTE, (url) => {
   return {
-    payload: newPhoto,
+    payload: url,
   };
 });

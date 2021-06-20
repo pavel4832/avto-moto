@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderMenu from "../header-menu/header-menu";
+import HeaderMenu from '../header-menu/header-menu';
 import {Link} from 'react-router-dom';
 
 const Header = () => {

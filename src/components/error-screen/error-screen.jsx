@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from "../header/header";
-import {Link} from "react-router-dom";
-import Footer from "../footer/footer";
+import Header from '../header/header';
+import {Link} from 'react-router-dom';
+import Footer from '../footer/footer';
 
 const ErrorScreen = () => {
   return <React.Fragment>

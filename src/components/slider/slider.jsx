@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {useSelector} from "react-redux";
-import {PHOTO_COUNT} from "../../const";
+import {useSelector} from 'react-redux';
+import {PHOTO_COUNT} from '../../const';
 
 const Slider = () => {
   const {car} = useSelector((state) => state.DATA);
