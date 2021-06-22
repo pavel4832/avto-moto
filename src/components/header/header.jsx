@@ -11,9 +11,9 @@ const Header = () => {
             <Link to="/" className="logo__link">
               <div className="logo__wrapper">
                 <img src="./img/logo.svg" alt="Лого" className="logo__image" width="55" height="55"/>
-                <div className="logo__text">
-                  <p className="logo__text--element logo__text--upper">AVTO</p>
-                  <p className="logo__text--element logo__text--lower">MOTO</p>
+                <div className="logo__title title">
+                  <p className="title__text title__text--upper">AVTO</p>
+                  <p className="title__text title__text--lower">MOTO</p>
                 </div>
               </div>
             </Link>

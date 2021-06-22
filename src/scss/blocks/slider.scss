@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 16px;
-  margin-left: -5px;
+  margin-left: 5px;
 }
 
 .slider__body {
@@ -23,12 +23,12 @@
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  .slider__control--arrow path {
+  .control__svg path {
     stroke: $text-main;
   }
   &:disabled {
     cursor: auto;
-    .slider__control--arrow path {
+    .control__svg path {
       stroke: $border-grey;
     }
   }

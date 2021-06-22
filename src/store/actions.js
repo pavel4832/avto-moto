@@ -1,11 +1,11 @@
 import {createAction} from '@reduxjs/toolkit';
 
 export const ActionType = {
-  REDIRECT_TO_ROUTE: `data/redirectToRoute`,
+  POST_REVIEW: `data/postReview`
 };
 
-export const redirectToRoute = createAction(ActionType.REDIRECT_TO_ROUTE, (url) => {
+export const postReview = createAction(ActionType.POST_REVIEW, (review) => {
   return {
-    payload: url,
+    payload: review,
   };
 });

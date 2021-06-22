@@ -1,6 +1,6 @@
 /*Fonts*/
 @font-face {
-  font-family: "Open-Regular";
+  font-family: "Open Regular";
   src: url("../fonts/OpenSans-Regular.woff2") format("woff2"),
   url("../fonts/OpenSans-Regular.woff") format("woff");
   font-weight: 400;
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: "Open-Medium";
+  font-family: "Open Medium";
   src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2"),
   url("../fonts/OpenSans-SemiBold.woff") format("woff");
   font-weight: 600;
@@ -18,7 +18,7 @@
 }
 
 @font-face {
-  font-family: "Open-Bold";
+  font-family: "Open Bold";
   src: url("../fonts/OpenSans-Bold.woff2") format("woff2"),
   url("../fonts/OpenSans-Bold.woff") format("woff");
   font-weight: 700;
@@ -27,7 +27,7 @@
 }
 
 @font-face {
-  font-family: "Proxima-Bold";
+  font-family: "Proxima Bold";
   src: url("../fonts/ProximaNova-Bold.woff2") format("woff2"),
   url("../fonts/ProximaNova-Bold.woff") format("woff");
   font-weight: 700;
@@ -35,7 +35,7 @@
   font-display: swap;
 }
 
-$OpenRegular: "Open-Regular", "Arial", sans-serif;
-$OpenMedium: "Open-Medium", "Arial", sans-serif;
-$OpenBold: "Open-Bold", "Arial", sans-serif;
-$ProximaBold: "Proxima-Bold", "Arial", sans-serif;
+$OpenRegular: "Open Regular", Arial, sans-serif;
+$OpenMedium: "Open Medium", Arial, sans-serif;
+$OpenBold: "Open Bold", Arial, sans-serif;
+$ProximaBold: "Proxima Bold", Arial, sans-serif;

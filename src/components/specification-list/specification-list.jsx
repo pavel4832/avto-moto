@@ -8,14 +8,12 @@ const SpecificationList = () => {
   return (
     <section className="tabs__specifications specifications">
       <h3 className="visually-hidden">Характеристики</h3>
-      <ul className="specification__list">
+      <ul className="specifications__list">
         {specifications.map((specification, index) => (
-          <React.Fragment key={`specification-${index}`}>
-            <li className="specification__item">
-              <span className="specification__text">{specification.name}</span>
-              <span className="specification__text">{specification.data}</span>
-            </li>
-          </React.Fragment>
+          <li key={`specifications-${index}`} className="specifications__item">
+            <span className="specifications__text">{specification.name}</span>
+            <span className="specifications__text">{specification.data}</span>
+          </li>
         ))}
       </ul>
     </section>

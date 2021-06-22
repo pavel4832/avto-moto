@@ -1,7 +1,8 @@
 .description {
   display: flex;
   flex-direction: column;
-  margin-left: 48px;
+  margin-top: 2px;
+  margin-left: 55px;
 }
 
 .description__title {
@@ -9,14 +10,14 @@
   margin-left: 3px;
   font-family: $OpenBold;
   font-style: normal;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 30px;
   line-height: 40.85px;
   color: $text-main;
 }
 
 .description__list {
-  margin-top: 22px;
+  margin-top: 19px;
   margin-bottom: 0;
   margin-left: 3px;
   display: flex;
@@ -37,7 +38,7 @@
   }
 }
 
-.description__element--icon {
+.description__icon {
   min-height: 40px;
   display: inline-flex;
   justify-content: center;
@@ -56,7 +57,7 @@
   text-align: center;
 }
 
-.description__priceList {
+.description__prices {
   display: flex;
   justify-content: flex-start;
   align-items: center;

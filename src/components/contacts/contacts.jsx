@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {YMaps, Map, Placemark, ZoomControl} from 'react-yandex-maps';
 
 const Contacts = () => {
   return (
@@ -8,7 +9,7 @@ const Contacts = () => {
       <ul className="contacts__list">
         <li className="contacts__item">
           <p className="contacts__title">Адрес</p>
-          <p className="contacts__text contact__text--address">Санкт-Петербург,<br/> набережная реки Карповки, дом 5</p>
+          <p className="contacts__text contacts__text--address">Санкт-Петербург,<br/> набережная реки Карповки, дом 5</p>
         </li>
         <li className="contacts__item">
           <p className="contacts__title">Режим работы</p>
@@ -23,12 +24,21 @@ const Contacts = () => {
           <Link to="mailto: info@avto-moto.ru" className="contacts__text">info@avto-moto.ru</Link>
         </li>
       </ul>
-      <div className="contacts__map">
-        <iframe
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3Af12ddd607d1408abd8ca7ee006d9087491da3e21220f949eeb268e164f366c6d&amp;source=constructor"
-          width="431" height="271" frameBorder="0">
-        </iframe>
-      </div>
+      <YMaps>
+        <div className="contacts__map">
+          <Map
+            defaultState={{
+              center: [59.968137, 30.316272],
+              zoom: 14,
+              controls: [],
+            }}
+            width="100%"
+            height="100%">
+            <ZoomControl options={{float: `right`}} />
+            <Placemark geometry={[59.968137, 30.316272]} />
+          </Map>
+        </div>
+      </YMaps>
     </section>
   );
 };
