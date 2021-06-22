@@ -3,22 +3,22 @@ import {Link} from 'react-router-dom';
 import Specifications from '../specification-list/specification-list';
 import Reviews from '../reviews/reviews';
 import Contacts from '../contacts/contacts';
-import {TABS_TYPE} from '../../const';
+import {TabsType} from '../../const';
 
 const Tabs = () => {
-  const [activeTab, setActiveTab] = useState(TABS_TYPE.SPECIFICATION);
+  const [activeTab, setActiveTab] = useState(TabsType.SPECIFICATION);
 
   const TabContent = () => {
     switch (activeTab) {
-      case TABS_TYPE.SPECIFICATION:
+      case TabsType.SPECIFICATION:
         return (
           <Specifications />
         );
-      case TABS_TYPE.REVIEWS:
+      case TabsType.REVIEWS:
         return (
           <Reviews />
         );
-      case TABS_TYPE.CONTACTS:
+      case TabsType.CONTACTS:
         return (
           <Contacts />
         );
@@ -34,22 +34,22 @@ const Tabs = () => {
           <li className="tabs__item">
             <Link
               to="#"
-              className={`tabs__link ${activeTab === TABS_TYPE.SPECIFICATION ? `tabs__link--active` : ``}`}
-              onClick={() => setActiveTab(TABS_TYPE.SPECIFICATION)}
+              className={`tabs__link ${activeTab === TabsType.SPECIFICATION ? `tabs__link--active` : ``}`}
+              onClick={() => setActiveTab(TabsType.SPECIFICATION)}
             >Характеристики</Link>
           </li>
           <li className="tabs__item">
             <Link
               to="#"
-              className={`tabs__link ${activeTab === TABS_TYPE.REVIEWS ? `tabs__link--active` : ``}`}
-              onClick={() => setActiveTab(TABS_TYPE.REVIEWS)}
+              className={`tabs__link ${activeTab === TabsType.REVIEWS ? `tabs__link--active` : ``}`}
+              onClick={() => setActiveTab(TabsType.REVIEWS)}
             >Отзывы</Link>
           </li>
           <li className="tabs__item">
             <Link
               to="#"
-              className={`tabs__link ${activeTab === TABS_TYPE.CONTACTS ? `tabs__link--active` : ``}`}
-              onClick={() => setActiveTab(TABS_TYPE.CONTACTS)}
+              className={`tabs__link ${activeTab === TabsType.CONTACTS ? `tabs__link--active` : ``}`}
+              onClick={() => setActiveTab(TabsType.CONTACTS)}
             >Контакты</Link>
           </li>
         </ul>

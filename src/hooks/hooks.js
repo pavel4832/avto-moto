@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {VALIDATORS} from '../const';
+import {Validators} from '../const';
 
 const useValidation = (value, validations) => {
   const [isEmpty, setEmpty] = useState(true);
@@ -8,7 +8,7 @@ const useValidation = (value, validations) => {
     for (const validation in validations) {
       if (validations.hasOwnProperty(validation)) {
         switch (validation) {
-          case VALIDATORS.IS_EMPTY:
+          case Validators.IS_EMPTY:
             if (value) {
               setEmpty(false);
             } else {

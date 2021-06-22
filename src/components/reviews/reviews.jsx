@@ -6,7 +6,6 @@ import PopupForm from '../popup-form/popup-form';
 
 const Reviews = () => {
   const [modalActive, setModalActive] = useState(false);
-  const [inputFocus, setInputFocus] = useState(false);
   const {reviews} = useSelector((state) => state.DATA);
 
   return (
@@ -48,15 +47,9 @@ const Reviews = () => {
         className="reviews__sent button"
         onClick={() => {
           setModalActive(true);
-          setInputFocus(true);
         }}
       >оставить отзыв</button>
-      <PopupForm
-        active={modalActive}
-        setActive={setModalActive}
-        focus={inputFocus}
-        setFocus={setInputFocus}
-      />
+      {(modalActive) ? <PopupForm active={modalActive} setActive={setModalActive}/> : ``}
     </section>
   );
 };

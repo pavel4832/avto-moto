@@ -1,30 +1,24 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
-import {RATING_STARS, KEY_NAME, VALIDATIONS} from '../../const';
+import {RATING_STARS, TIME, KeyName, Validations, Means} from '../../const';
 import {useInput} from '../../hooks/hooks';
 import {useSelector, useDispatch} from 'react-redux';
 import {postReview} from '../../store/actions';
 
-
 const PopupForm = (props) => {
-  const {active, setActive, focus, setFocus} = props;
+  const {active, setActive} = props;
   const {reviews} = useSelector((state) => state.DATA);
   const [userFormRating, setUserFormRating] = useState(5);
-  const name = useInput(``, VALIDATIONS.IS_EMPTY);
-  const comment = useInput(``, VALIDATIONS.IS_EMPTY);
+  const name = useInput(``, Validations.IS_EMPTY);
+  const comment = useInput(``, Validations.IS_EMPTY);
   const advantages = useInput(``);
   const problems = useInput(``);
-  const nameInput = useRef();
 
   const dispatch = useDispatch();
 
-  if (focus) {
-    nameInput.current.focus();
-  }
-
   const onKeydown = (evt) => {
     switch (evt.key) {
-      case KEY_NAME.ESC:
+      case KeyName.ESC:
         setActive(false);
         break;
     }
@@ -57,8 +51,8 @@ const PopupForm = (props) => {
       problems: problems.value,
       comments: comment.value,
       rating: userFormRating,
-      means: (userFormRating >= 3) ? `Советует` : `Не советует`,
-      time: `1 минуту назад`
+      means: (userFormRating >= 3) ? Means.YES : Means.NO,
+      time: TIME
     };
     dispatch(postReview(newReview));
     handleClose();
@@ -82,14 +76,13 @@ const PopupForm = (props) => {
               <label className="message-form__label">
                 {(name.isDirty && name.isEmpty) ? <span className="message-form__errorText">Пожалуйста, заполните поле</span> : ``}
                 <input
-                  ref={nameInput}
+                  autoFocus={true}
                   className="message-form__field name-field"
                   type="text"
                   name="name-id"
                   placeholder="Имя"
                   required={true}
                   value={name.value}
-                  onClick={setFocus(false)}
                   onChange={(evt) => name.onChange(evt)}
                   onBlur={(evt) => name.onBlur(evt)}
                 />
@@ -162,8 +155,6 @@ const PopupForm = (props) => {
 PopupForm.propTypes = {
   active: PropTypes.bool.isRequired,
   setActive: PropTypes.func.isRequired,
-  focus: PropTypes.bool.isRequired,
-  setFocus: PropTypes.func.isRequired,
 };
 
 export default PopupForm;
