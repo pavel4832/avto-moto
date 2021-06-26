@@ -1,9 +1,15 @@
 .page-menu {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  justify-self: end;
+  display: flex;
+  flex-wrap: wrap;
   align-self: center;
 }
 
 .page-menu__list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -11,8 +17,9 @@
 .page-menu__item {
   list-style-type: none;
   margin-left: 68px;
+  margin-bottom: 15px;
   &:first-child {
-    margin-left: 0;
+    margin-left: 20px;
   }
 }
 

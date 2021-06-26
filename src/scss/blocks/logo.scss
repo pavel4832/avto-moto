@@ -1,5 +1,8 @@
 .logo {
+  grid-column-start: 1;
+  grid-column-end: 2;
   margin-left: 13px;
+  margin-bottom: 15px;
 }
 .logo__wrapper {
   display: flex;

@@ -8,6 +8,15 @@ const Reviews = () => {
   const [modalActive, setModalActive] = useState(false);
   const {reviews} = useSelector((state) => state.DATA);
 
+  const onModalOpenHandler = () => {
+    const scrollY = window.pageYOffset;
+    const screenWidth = document.body.clientWidth;
+    document.body.style.position = `fixed`;
+    document.body.style.minWidth = `${screenWidth}px`;
+    document.body.style.top = `-${scrollY}px`;
+    setModalActive(true);
+  }
+
   return (
     <section className="tabs__reviews reviews">
       <ul className="reviews__list">
@@ -45,9 +54,7 @@ const Reviews = () => {
       </ul>
       <button
         className="reviews__sent button"
-        onClick={() => {
-          setModalActive(true);
-        }}
+        onClick={onModalOpenHandler}
       >оставить отзыв</button>
       {(modalActive) ? <PopupForm active={modalActive} setActive={setModalActive}/> : ``}
     </section>

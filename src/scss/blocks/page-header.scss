@@ -5,8 +5,7 @@
 }
 
 .page-header__wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 15px 0;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  padding: 15px 0 0;
 }

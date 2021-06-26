@@ -8,7 +8,8 @@ import {postReview} from '../../store/actions';
 const PopupForm = (props) => {
   const {active, setActive} = props;
   const {reviews} = useSelector((state) => state.DATA);
-  const [userFormRating, setUserFormRating] = useState(5);
+  const [userFormRating, setUserFormRating] = useState(1);
+  const [isError, setError] = useState(false);
   const name = useInput(``, Validations.IS_EMPTY);
   const comment = useInput(``, Validations.IS_EMPTY);
   const advantages = useInput(``);
@@ -38,24 +39,34 @@ const PopupForm = (props) => {
   };
 
   const handleClose = () => {
+    const scrollY = document.body.style.top;
+    document.body.style.position = ``;
+    document.body.style.top = '';
+    document.body.style.minWidth = `320px`;
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
     resetForm();
     setActive(false);
   };
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    const newReview = {
-      id: reviews.length + 1,
-      name: name.value,
-      advantages: advantages.value,
-      problems: problems.value,
-      comments: comment.value,
-      rating: userFormRating,
-      means: (userFormRating >= 3) ? Means.YES : Means.NO,
-      time: TIME
-    };
-    dispatch(postReview(newReview));
-    handleClose();
+    if (name.isEmpty || comment.isEmpty) {
+      setError(true);
+    } else {
+      setError(false);
+      const newReview = {
+        id: reviews.length + 1,
+        name: name.value,
+        advantages: advantages.value,
+        problems: problems.value,
+        comments: comment.value,
+        rating: userFormRating,
+        means: (userFormRating >= 3) ? Means.YES : Means.NO,
+        time: TIME
+      };
+      dispatch(postReview(newReview));
+      handleClose();
+    }
   };
 
   return (
@@ -70,14 +81,14 @@ const PopupForm = (props) => {
 
         </button>
 
-        <form className="message-popup__form message-form" action="https://echo.htmlacademy.ru" method="post" onSubmit={handleSubmit}>
+        <form className="message-popup__form message-form" action="https://echo.htmlacademy.ru" method="post" onSubmit={handleSubmit} noValidate={true}>
           <div className="message-form__wrapper">
             <div className="message-form__left">
               <label className="message-form__label">
-                {(name.isDirty && name.isEmpty) ? <span className="message-form__errorText">Пожалуйста, заполните поле</span> : ``}
                 <input
                   autoFocus={true}
-                  className="message-form__field name-field"
+                  aria-label="Имя"
+                  className={`message-form__field name-field ${(isError && name.isEmpty) && `error`}`}
                   type="text"
                   name="name-id"
                   placeholder="Имя"
@@ -87,10 +98,12 @@ const PopupForm = (props) => {
                   onBlur={(evt) => name.onBlur(evt)}
                 />
                 <span className="message-form__required">*</span>
+                {(name.isEmpty) && <span className={`message-form__errorText ${(isError) && `error`}`}>Пожалуйста, заполните поле</span>}
               </label>
 
               <label className="message-form__label">
                 <input
+                  aria-label="Достоинства"
                   className="message-form__field"
                   type="text" name="mail-id"
                   placeholder="Достоинства"
@@ -100,6 +113,7 @@ const PopupForm = (props) => {
 
               <label className="message-form__label">
                 <input
+                  aria-label="Недостатки"
                   className="message-form__field"
                   type="text"
                   name="mail-id"
@@ -116,6 +130,7 @@ const PopupForm = (props) => {
                   {RATING_STARS.map((rating, index) => (
                     <React.Fragment key={`Rating-${index}`}>
                       <input
+                        aria-label="Оценка"
                         className="rating__input"
                         id={`star-${rating}`}
                         type="radio" name="rating"
@@ -131,9 +146,9 @@ const PopupForm = (props) => {
                 </div>
               </div>
               <label className="message-form__label textarea-label">
-                {(comment.isDirty && comment.isEmpty) && <span className="message-form__errorText">Пожалуйста, заполните поле</span>}
                 <textarea
-                  className="message-form__area"
+                  aria-label="Комментарий"
+                  className={`message-form__area ${(isError && comment.isEmpty) && `error`}`}
                   name="message-text"
                   placeholder="Комментарий"
                   value={comment.value}
@@ -142,6 +157,7 @@ const PopupForm = (props) => {
                   required={true}
                 ></textarea>
                 <span className="message-form__required">*</span>
+                {(comment.isEmpty) && <span className={`message-form__errorText ${(isError) && `error`}`}>Пожалуйста, заполните поле</span>}
               </label>
             </div>
           </div>

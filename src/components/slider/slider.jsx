@@ -16,6 +16,7 @@ const Slider = () => {
         <button
           className="slider__control control"
           disabled={activePhoto === 0}
+          aria-label="Кнопка влево"
           onClick={() => {
             if (activePhoto !== 0) {
               let newActivePhoto = activePhoto - 1;
@@ -40,6 +41,7 @@ const Slider = () => {
         <button
           className="slider__control control"
           disabled={activePhoto === photos.length - 1}
+          aria-label="Кнопка вправо"
           onClick={() => {
             if (activePhoto !== photos.length - 1) {
               let newActivePhoto = activePhoto + 1;

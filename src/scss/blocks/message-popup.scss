@@ -99,14 +99,19 @@
   border: 1px solid $border-gray02;
   box-sizing: border-box;
   &:invalid {
-    border: 1px solid $text-error-red;
+    border: 1px solid $border-gray02;
   }
   &:focus ~ .message-form__required {
     display: none;
   }
 }
 
+.message-form__field.error {
+  border: 1px solid $text-error-red;
+}
+
 .message-form__errorText {
+  display: none;
   position: absolute;
   top: -23px;
   left: 1px;
@@ -116,6 +121,10 @@
   font-size: 14px;
   line-height: 19px;
   color: $text-error-red;
+}
+
+.message-form__errorText.error {
+  display: block;
 }
 
 .message-form__required {
@@ -206,11 +215,15 @@
   box-sizing: border-box;
   resize: none;
   &:invalid {
-    border: 1px solid $text-error-red;
+    border: 1px solid $border-gray02;
   }
   &:focus ~ .message-form__required {
     display: none;
   }
+}
+
+.message-form__area.error {
+  border: 1px solid $text-error-red;
 }
 
 .message-form__submit {

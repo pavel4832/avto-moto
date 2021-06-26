@@ -1,9 +1,11 @@
 const path = require('path');
 const miniCss = require('mini-css-extract-plugin');
+const webpack = require('webpack');
 const minify = require('optimize-css-assets-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
@@ -14,6 +16,12 @@ module.exports = {
     open: true,
     port: 1337,
     historyApiFallback: true,
+  },
+  devtool: 'cheap-module-source-map',
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -45,7 +53,11 @@ module.exports = {
   },
   optimization: {
     minimizer: [
-      new minify({})
+      new minify({}),
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': '"production"'
+      }),
+      new UglifyJsPlugin({}),
     ],
   },
   plugins: [
