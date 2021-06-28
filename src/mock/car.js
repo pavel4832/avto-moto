@@ -10,7 +10,7 @@ export const CAR = {
   },
   "prices": {
     "new": `2 300 000 ₽`,
-    "old": `2  400 000 ₽`
+    "old": `2 400 000 ₽`
   },
   "loan": `11 000 ₽`,
   "specifications": [
